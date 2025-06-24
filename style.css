@@ -49,7 +49,9 @@ header {
     align-items: center;
     justify-content: space-between;
 }
-
+.logo {
+  color: white;
+}
 /* Menu cha ở header */
 nav.header-menu {
     display: flex;
