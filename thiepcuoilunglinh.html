@@ -146,7 +146,7 @@
       <img src="https://bellabridal.vn/public/upload/files/343342550_5955920044504242_5222768225392896037_n.jpg" alt="Ảnh cưới 1">
     </div>
     <div class="message">
-      Trân trọng kính mời bạn đến dự lễ thành hôn của chúng tôi!<br>
+      Trân trọng kính mời bạn: <h3><span id="ten-khach">Bạn</span></h3> đến dự lễ thành hôn của chúng tôi!<br>
       Sự hiện diện của bạn là niềm vinh hạnh lớn lao đối với gia đình hai bên!<br>
       Thời gian: 10h00 sáng, ngày 20 tháng 12 năm 2025<br>
       Địa điểm: Trung tâm tiệc cưới Hoa Hồng, Hà Nội
@@ -155,6 +155,11 @@
   </div>
 
   <script>
+    const params = new URLSearchParams(window.location.search);
+    const tenKhach = params.get('ten');
+    if (tenKhach) {
+    document.getElementById('ten-khach').textContent = decodeURIComponent(tenKhach);
+    }
     const canvas = document.getElementById('sakuraCanvas');
     const ctx = canvas.getContext('2d');
     let width = canvas.width = window.innerWidth;
